@@ -18,4 +18,12 @@
   #### 安装依赖
   - 渲染器 vue-server-renderer
   - node服务器 express
-  #### 便写服务端脚本
+  #### 编写服务端脚本
+  #### 配置路由
+    - vue项目配置路由，需要使用工厂函数创建新的router实例
+    - 每次用户请求都要创建router实例，服务端渲染使用同一个实例会造成全局冲突。
+    - 优化，页面缓存
+
+### 构建
+  #### 构建流程
+  - source代码，经过webpack的build，生成server bundle 和client Bundle文件

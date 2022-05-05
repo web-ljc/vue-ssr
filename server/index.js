@@ -9,12 +9,13 @@ const renderer = require('vue-server-renderer').createRenderer()
 
 // 将来用渲染服务器page可以得到html内容
 const page = new Vue({
-  template: '<div>hi, ssr</div>'
+  data: {title: '服务端开发'},
+  template: '<div><h1>{{title}}</h1><div>hi, ssr</div></div>'
 })
 
 app.get('/', async (req, res) => {
-  // 异步方法，返回promise
   try {
+    // 异步方法，返回promise
     const html = await renderer.renderToString(page)
     console.info(html)
     res.send(html)
