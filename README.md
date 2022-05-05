@@ -27,3 +27,20 @@
 ### 构建
   #### 构建流程
   - source代码，经过webpack的build，生成server bundle 和client Bundle文件
+  - app.js // 通用入口
+  - entry-client.js // 客户端入口，仅运行于浏览器
+  - entry-server.js // 服务端入口，仅运行于服务器
+  - webpack配置
+  #### 脚本配置
+  - 安装依赖
+    yarn add cross-env -D
+  - 定义创建脚本 package.json
+  - 执行打包
+
+### 启动
+  ```js
+    // 1、打包，根目录中
+    yarn build
+    // 2、服务端运行，进入到server文件中
+    node index.js
+  ```

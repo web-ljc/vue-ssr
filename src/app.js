@@ -1,4 +1,4 @@
-// 创建vue实例
+// 通用入口，创建vue实例
 import Vue from 'vue'
 import App from './App.vue'
 import createRouter from './router'
